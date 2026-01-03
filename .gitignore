@@ -1,0 +1,32 @@
+# Large model files
+*.pth
+*.onnx
+
+# Dataset/Large text files
+paths.txt
+dirs.txt
+all_files.txt
+all_files_v2.txt
+
+# Dataset directories
+SAM_Dataset/
+Video_Dataset/
+Depression Data/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Node
+node_modules/
+.next/
+out/
+build/
+.DS_Store
+
+# Artifacts
+.gemini/
+brain/

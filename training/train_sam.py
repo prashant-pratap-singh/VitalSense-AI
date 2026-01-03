@@ -44,7 +44,7 @@ class FacialSegmentationDataset(Dataset):
 
 def train():
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    sam = sam_model_registry["vit_b"](checkpoint="sam_vit_b_01ec2a.pth")
+    sam = sam_model_registry["vit_b"](checkpoint="sam_vit_b_01ec64.pth")
     sam.to(device)
 
     # Freeze encoder and prompt encoder

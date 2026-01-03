@@ -7,7 +7,7 @@ import os
 import requests
 
 class VitalSAM:
-    def __init__(self, model_type="vit_b", checkpoint_path="sam_vit_b_01ec2a.pth"):
+    def __init__(self, model_type="vit_b", checkpoint_path="sam_vit_b_01ec64.pth"):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.checkpoint_path = checkpoint_path
         self.model_type = model_type
@@ -15,7 +15,7 @@ class VitalSAM:
         # Ensure model exists
         if not os.path.exists(checkpoint_path):
             print(f"Downloading {model_type} model...")
-            url = "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec2a.pth"
+            url = f"https://dl.fbaipublicfiles.com/segment_anything/{checkpoint_path}"
             response = requests.get(url, stream=True)
             with open(checkpoint_path, "wb") as f:
                 for chunk in response.iter_content(chunk_size=8192):

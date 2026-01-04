@@ -20,7 +20,6 @@ VitalSense AI leverages the **Segment Anything Model (SAM)** combined with **Med
 ### Prerequisites
 - Python 3.9+
 - Node.js 18+
-- NVIDIA GPU (Recommended for real-time inference)
 
 ### 1. Backend Setup
 ```powershell
